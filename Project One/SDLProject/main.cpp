@@ -223,7 +223,7 @@ void update()
     // --- Eneru MOVEMENT (relative to luffy's movement) //
     
     g_drops_movement.x = ( 1.5f * g_beaker_movement.x ); //change of movement
-    g_drops_movement.y = ( sin( g_beaker_movement.y) ); //change of movement
+    g_drops_movement.y = ( 2.0f * sin( g_beaker_movement.y) ); //change of movement
 
     g_drops_position.y = g_beaker_position.y + 1.0f; //relative to position
     

@@ -37,6 +37,8 @@
 /* Begin PBXFileReference section */
 		84D052812CAEF44A003975FF /* beaker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beaker.png; sourceTree = "<group>"; };
 		84D052822CAEF44A003975FF /* drops.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = drops.png; sourceTree = "<group>"; };
+		D7A7BB1A2D6143E0007304F9 /* scared2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scared2.png; sourceTree = "<group>"; };
+		D7A7BB1B2D6143E0007304F9 /* scared.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scared.png; sourceTree = "<group>"; };
 		DBDF1B4F2323DE3F007CECB1 /* SDLProject */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SDLProject; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBDF1B522323DE3F007CECB1 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		DBDF1B592323DE8D007CECB1 /* ShaderProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShaderProgram.h; sourceTree = "<group>"; };
@@ -94,6 +96,8 @@
 				DBDF1B592323DE8D007CECB1 /* ShaderProgram.h */,
 				DBDF1B5C2323DE8D007CECB1 /* shaders */,
 				DBDF1B5A2323DE8D007CECB1 /* stb_image.h */,
+				D7A7BB1B2D6143E0007304F9 /* scared.png */,
+				D7A7BB1A2D6143E0007304F9 /* scared2.png */,
 				DBDF1B522323DE3F007CECB1 /* main.cpp */,
 			);
 			path = SDLProject;
