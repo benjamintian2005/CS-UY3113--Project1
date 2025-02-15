@@ -57,7 +57,7 @@ constexpr char BEAKER_SPRITE_FILEPATH[] = "scared.png",
 
 constexpr float MINIMUM_COLLISION_DISTANCE = 1.0f;
 constexpr glm::vec3 INIT_SCALE_DROPS  = glm::vec3(1.0f, 1.0f, 0.0f),
-                    INIT_POS_DROPS    = glm::vec3(-1.0f, 0.0f, 0.0f),
+                    INIT_POS_DROPS    = glm::vec3(-1.0f, 1.0f, 0.0f),
                     INIT_SCALE_BEAKER = glm::vec3(1.0f, 1.0f, 0.0f),
                     INIT_POS_BEAKER   = glm::vec3(-1.0f, 0.0f, 0.0f);
 
@@ -223,9 +223,9 @@ void update()
     // --- Eneru MOVEMENT (relative to luffy's movement) //
     
     g_drops_movement.x = ( 1.5f * g_beaker_movement.x ); //change of movement
-    g_drops_movement.y = ( 2.0f * sin( g_beaker_movement.y) ); //change of movement
+    g_drops_movement.y = ( 0.5f * sin( g_beaker_movement.y) ); //change of movement
 
-    g_drops_position.y = g_beaker_position.y + 1.0f; //relative to position
+    g_drops_position.y = g_beaker_position.y + 0.5f; //relative to position
     
     
     // --- ACCUMULATOR LOGIC --- //
@@ -241,13 +241,17 @@ void update()
 
     // --- Luffy TRANSFORM --- //
     g_beaker_matrix = glm::mat4(1.0f);
+    g_beaker_matrix = glm::translate(g_beaker_matrix, INIT_POS_BEAKER);
     g_beaker_matrix = glm::translate(g_beaker_matrix, g_beaker_position);
+
     g_beaker_matrix = glm::rotate(g_beaker_matrix, g_time * 1.0f, glm::vec3(0.0f, 0.0f, 1.0f)); // Rotating beaker
     g_beaker_matrix = glm::scale(g_beaker_matrix, INIT_SCALE_BEAKER);
 
     // --- Eneru TRANSFORM --- //
     g_drops_matrix = glm::mat4(1.0f);
+    g_drops_matrix = glm::translate(g_drops_matrix, INIT_POS_DROPS);
     g_drops_matrix = glm::translate(g_drops_matrix, g_drops_position);
+
     //g_drops_matrix = glm::scale(g_drops_matrix, INIT_SCALE_DROPS);
     g_drops_matrix = glm::scale(g_drops_matrix, glm::vec3(scale_factor));
 
